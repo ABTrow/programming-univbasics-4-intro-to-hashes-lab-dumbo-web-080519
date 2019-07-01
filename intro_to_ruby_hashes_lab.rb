@@ -15,7 +15,7 @@ def id_generator
 end
 
 def my_hash_creator(key, value)
-  {key: value}
+  {key => value}
 end
 
 def read_from_hash(hash, key)
@@ -23,9 +23,9 @@ def read_from_hash(hash, key)
 end
 
 def update_counting_hash(hash, key)
-  if key[hash]
-    key[hash] += 1
+  if hash[key]
+    hash[key] += 1
   else 
-    key[hash] = 1
+    hash[key] = 1
   end
 end
